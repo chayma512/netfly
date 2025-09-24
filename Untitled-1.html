@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chiha Chayma — Développeuse Logiciels & Web</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* ===== Reset & Global ===== */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;overflow-x:hidden;background:#0f2027;color:#fff;}
+a{text-decoration:none;color:inherit;}
+img{display:block;}
+
+/* ===== Background Animé Hero ===== */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: 600% 600%;
+  animation: gradientBG 20s ease infinite;
+}
+@keyframes gradientBG{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* ===== Hero Text ===== */
+.hero h1{
+  font-size:4em;
+  font-weight:800;
+  margin-bottom:15px;
+  text-shadow:0 4px 20px rgba(0,0,0,0.5);
+  animation: fadeInDown 2s ease forwards;
+}
+.hero p{
+  font-size:1.5em;
+  opacity:0;
+  animation:fadeInUp 2s ease forwards 1s;
+}
+@keyframes fadeInDown{0%{opacity:0;transform:translateY(-50px);}100%{opacity:1;transform:translateY(0);}}
+@keyframes fadeInUp{0%{opacity:0;transform:translateY(50px);}100%{opacity:1;transform:translateY(0);}}
+
+/* ===== Particules Background ===== */
+#particles-js{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index:0;
+}
+
+/* ===== Portfolio Section ===== */
+section.portfolio{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  padding:80px 10%;
+  background:#111;
+  position:relative;
+}
+.project{
+  position:relative;
+  border-radius:20px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:transform 0.5s, box-shadow 0.5s;
+  background:rgba(255,255,255,0.05);
+  ;
+}
+.project img{
+  width:100%;
+  display:block;
+  transition:transform 0.5s;
+}
+.project:hover img{
+  transform:scale(1.05);
+}
+.project .overlay{
+  position:absolute;
+  top:0;left:0;width:100%;height:100%;
+  background:rgba(30,144,255,0.6);
+  opacity:0;
+  transition:opacity 0.5s;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+  font-weight:600;
+  font-size:1.2em;
+  text-align:center;
+  padding:20px;
+}
+.project:hover .overlay{opacity:1;}
+
+/* ===== Scroll Animation ===== */
+.fade-in{
+  opacity:0;
+  transform:translateY(30px);
+  transition:opacity 1s ease-out, transform 1s ease-out;
+}
+.fade-in.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ===== Contact Section ===== */
+section.contact{
+  background:#1e1e1e;
+  color:#fff;
+  text-align:center;
+  padding:80px 10%;
+}
+section.contact h2{
+  font-size:2.5em;
+  margin-bottom:25px;
+}
+section.contact input, section.contact textarea{
+  width:80%;
+  max-width:400px;
+  padding:15px;
+  margin:10px 0;
+  border-radius:10px;
+  border:none;
+  outline:none;
+}
+section.contact button{
+  padding:15px 35px;
+  border:none;
+  border-radius:10px;
+  background:#1e90ff;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+section.contact button:hover{
+  background:#63b3ed;
+  transform:scale(1.05);
+}
+
+/* ===== Footer ===== */
+footer{
+  text-align:center;
+  padding:25px;
+  background:#111;
+  color:#ccc;
+  font-size:0.9em;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+  .hero h1{font-size:3em;}
+  .hero p{font-size:1.2em;}
+}
+
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+  <div id="particles-js"></div>
+  <h1> Studio CréaWeb </h1>
+  <p>Un site web est bien plus qu'une simple carte de visite en ligne.
+     C'est votre outil commercial le plus puissant.
+      Vous avez besoin d'un site desktop performant, moderne et adapté à vos objectifs.
+      Que vous soyez à l'aise avec WordPress ou que vous préfériez une solution entièrement gérée, nous créons la plateforme digitale unique qui fera la différence pour votre projet.</p>
+</div>
+
+<!-- Portfolio -->
+<section class="portfolio">
+  <div class="project fade-in">
+    <img src="C:\Users\shayma\Downloads\ChatGPT Image 24 sept. 2025, 11_01_21.png" alt="Projet 1">
+    <div class="overlay"> SYSTÈME DE FACTURATION INTÉGRÉ
+</div>
+  </div>
+  <div class="project fade-in">
+    <img src="C:\Users\shayma\Downloads\ChatGPT Image 24 sept. 2025, 11_01_21.png" alt="Projet 2">
+    <div class="overlay">GESTION DES ÉTIQUETTES ET PRODUITS
+</div>
+  </div>
+  <div class="project fade-in">
+    <img src="c:\Users\shayma\OneDrive\Bureau\TRAVAIL\Capture d’écran FACTURE 2025-08-29 125137.png" alt="Projet 3">
+    <div class="overlay">GESTION INTELLIGENTE DES RENDEZ-VOUS
+</div>
+  </div>
+  <div class="project fade-in">
+    <img src="c:\Users\shayma\OneDrive\Bureau\TRAVAIL\Capture d'écran 2025-05-14 132525.png" alt="Projet 4">
+    <div class="overlay"> GESTION DE STOCK AUTOMATISÉE
+</div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact fade-in">
+  <h2>Travaillons ensemble</h2>
+  <form>
+    <input type="text" placeholder="Nom" required><br>
+    <input type="email" placeholder="Email" required><br>
+    <textarea rows="4" placeholder="Votre message" required></textarea><br>
+    <button type="submit">Envoyer</button>
+  </form>
+  <p>Ou contactez-moi directement : <a href="mailto: CréaWeb@example.com">CréaWeb@example.com</a></p>
+</section>
+
+<!-- Footer -->
+<footer class="fade-in">
+  &copy; 2025  Studio CréaWeb — Tous droits réservés
+</footer>
+
+<!-- ===== Particles JS ===== -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 60 },
+    "color": { "value": "#ffffff" },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.5 },
+    "size": { "value": 3 },
+    "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 },
+    "move": { "enable": true, "speed": 2 }
+  }
+});
+
+/* ===== Scroll Animation ===== */
+const faders = document.querySelectorAll('.fade-in');
+const options = {threshold:0.1};
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+}, options);
+
+faders.forEach(fader=>{appearOnScroll.observe(fader);});
+</script>
+
+</body>
+</html>
